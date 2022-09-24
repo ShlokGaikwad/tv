@@ -78,7 +78,6 @@ export default function Actor() {
                         {e.person.birthday != null ? e.person.birthday : "Not Available"}
               
                       </p>
-                      {/* <p>{e.person.country.name}</p>  */}
                     </div>
                     <h5 className="text-danger text-center">{e.person.name}</h5>
                   </div>
