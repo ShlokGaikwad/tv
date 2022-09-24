@@ -8,6 +8,9 @@ export default function Actor() {
   if (inputVal.length > 0) {
     dataUrl = `https://api.tvmaze.com/search/shows?q=${inputVal}`;
   }
+ else {
+        dataUrl = `https://api.tvmaze.com/search/shows?q=`;
+    }
 
   const getShowData = () => {
     fetch(dataUrl)
@@ -71,7 +74,7 @@ export default function Actor() {
                           aria-hidden="true"
                         ></i>{" "}
                         <strong>Generes: </strong>
-                        {e.show.genres}
+                        {e.show.genres[0] !=null ? e.show.genres[0] : "Not Available"}
                       </span>
                     </div>
                     <h5 className="text-danger text-center">{e.show.name}</h5>

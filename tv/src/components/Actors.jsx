@@ -7,7 +7,9 @@ export default function Actor() {
   let dataUrl = "";
   if (inputVal.length > 0) {
     dataUrl = `https://api.tvmaze.com/search/people?q=${inputVal}`;
-  }
+  } else {
+        dataUrl = `https://api.tvmaze.com/search/shows?q=`;
+     }
 
   const getActorsData = () => {
     fetch(dataUrl)
@@ -72,9 +74,11 @@ export default function Actor() {
                         className="card-text overflow-hidden"
                         style={{ height: "20px" }}
                       >
-                        Birth Date:{" "}
-                        {e.person.birthday != null ? e.person.birthday : "NAN"}
+                        <strong>Birth Date:{" "}</strong>
+                        {e.person.birthday != null ? e.person.birthday : "Not Available"}
+              
                       </p>
+                      {/* <p>{e.person.country.name}</p>  */}
                     </div>
                     <h5 className="text-danger text-center">{e.person.name}</h5>
                   </div>
