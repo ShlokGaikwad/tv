@@ -51,14 +51,14 @@ export default function Actor() {
                       {e.show.image ? (
                         <img
                           src={e.show.image.medium}
-                          style={{ width: "303px", height: "325px" }}
+                          style={{ width: "100%", height: "325px" }}
                           alt={e.show.name != null ? e.show.name : "not found"}
                         />
                       ) : (
                         <div className="poster" style={{ height: "325px" }}>
                           <img
                             src="https://media.istockphoto.com/vectors/no-image-available-like-missing-picture-vector-id1352945762?k=20&m=1352945762&s=612x612&w=0&h=_YL7fggDHcNsPkJ594D5eJz2ZaUKndJOFrZH7wTsRIQ="
-                            style={{ width: "303px", height: "325px" }}
+                            style={{ width: "100%", height: "325px" }}
                             alt={e.show.name}
                           />
                         </div>
